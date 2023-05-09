@@ -1,5 +1,5 @@
-#RS40 TP2 / yann derré
-##PART I
+# RS40 TP2 / yann derré
+## PART I
 On peut voir dans wireshark les échanges fait avec le server sur
 localhost. La requête GET vers le server pour demander la page, et le
 retour non chiffré de la page, contenant notre mot de passe ici changé
@@ -7,7 +7,7 @@ par"bigjoe bigman". On inspecte le packet retourné par le serveur nous
 donnant un status 200 OK. Le reste des packets échangés sont des
 packets d'acknowledgement (handshake) de fin de transaction entre le
 client et le serveur.
-##PART II
+## PART II
 
  On configure nos paramètres dans les fonctions correspondantes
 
@@ -32,7 +32,7 @@ client et le serveur.
 
  d'une vraie CA reconnue. Il n'est pas possible de générer un
  certificat pour localhost.
-##PART III
+## PART III
 
 ![](asset/image7.png)
 
