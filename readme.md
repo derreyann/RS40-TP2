@@ -1,5 +1,9 @@
 # RS40 TP2 / yann derré
 ## PART I
+
+![](asset/image1.png)
+![](asset/image2.png)
+
 On peut voir dans wireshark les échanges fait avec le server sur
 localhost. La requête GET vers le server pour demander la page, et le
 retour non chiffré de la page, contenant notre mot de passe ici changé
