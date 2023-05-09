@@ -20,13 +20,16 @@ On peut voir dans wireshark les échanges fait avec le server sur localhost. La 
  J'ai modifié la fonction print_pem pour déchiffrer le CA
 
 ![](asset/image5.png)
- Le navigateur nous affiche un message d'erreur de certificat invalide.  Notre autorité crée n'est pas connue
 
- par le navigateur et ne peut donc pas vérifier le certificat.
+Le navigateur nous affiche un message d'erreur de certificat invalide.  Notre autorité crée n'est pas connue
 
- ![](asset/image6.png)
+par le navigateur et ne peut donc pas vérifier le certificat.
 
- Une manière de contourner cette limitation est d'obtenir un nom de domaine et d'un certificat auprès d'une vraie CA reconnue. Il n'est pas possible de générer un certificat pour localhost.
+
+
+![](asset/image6.png)
+
+Une manière de contourner cette limitation est d'obtenir un nom de domaine et d'un certificat auprès d'une vraie CA reconnue. Il n'est pas possible de générer un certificat pour localhost.
 
 ## PART III
 
@@ -34,4 +37,4 @@ On peut voir dans wireshark les échanges fait avec le server sur localhost. La 
 
 ![](asset/image8.png)
 
- J'envoie un form à l'utilisateur. Le serveur compare avec ses valeurs. On peut ensuite valider et envoyer le message secret en retour. !!! NE FONCTIONNE PAS SANS HTTPS, la requête POST avec les identifiants utilisateurs seront en clair.
+J'envoie un form à l'utilisateur. Le serveur compare avec ses valeurs. On peut ensuite valider et envoyer le message secret en retour. !!! NE FONCTIONNE PAS SANS HTTPS, la requête POST avec les identifiants utilisateurs seront en clair.
