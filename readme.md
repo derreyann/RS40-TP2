@@ -2,7 +2,6 @@
 
 ## PART I
 
-![](asset/image1.png)
 
 ![](asset/image2.png)
 
