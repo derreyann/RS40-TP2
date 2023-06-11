@@ -7,12 +7,13 @@ Created on May 2022
 """
 
 from flask import Flask, request
+import bcrypt
 import ssl
 
 #write a quick function to hash and salt the password
 def hash_password(password):
-    salt = "16"
-    return salt + password + salt
+    hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt(rounds=16))
+    return hashed_password
 
 # définir le message secret
 SECRET_MESSAGE = "bigjoe bigman" # A modifier
@@ -29,7 +30,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
         
-        if username == USER1_LOGIN and hash_password(password) == USER1_PASSWORD:
+        if username == USER1_LOGIN and bcrypt.checkpw(password.encode('utf-8'), USER1_PASSWORD):
             return ("Logged in successfully! \n" + SECRET_MESSAGE)
         else:
             return 'Wrong username or password!'
